@@ -10,7 +10,7 @@
     <header class="hero">
       <nav class="topbar">
         <div class="brand">Veille</div>
-        <a href="#maj-25" class="nav-link">Voir les nouvelles infos</a>
+        <a href="#maj-jour" class="nav-link">Voir les nouvelles infos</a>
       </nav>
 
       <div class="hero-content">
@@ -20,24 +20,22 @@
           Une synthèse claire des évolutions technologiques, réglementaires et
           sectorielles à surveiller.
         </p>
-        <a href="#maj-25" class="cta-button">Voir la mise à jour</a>
+        <a href="#maj-jour" class="cta-button">Voir la mise à jour</a>
       </div>
     </header>
 
     <main>
-      <section id="maj-25" class="update-banner" aria-label="Mise à jour du 25">
-        <span class="tag">MAJ du 25</span>
+      <section id="maj-jour" class="update-banner" aria-label="Mise à jour du jour">
+        <span class="tag" id="badge-maj">MAJ du jour</span>
         <h2>Dernière mise à jour</h2>
-        <p>
-          Les informations ont été actualisées le 25 octobre 2026.
-        </p>
-        <a href="#maj-25" class="update-button">Voir les nouvelles infos</a>
+        <p id="date-maj">Les informations ont été actualisées aujourd'hui.</p>
+        <a href="#maj-jour" class="update-button">Voir les nouvelles infos</a>
 
         <ul>
-          <li>Renforcement des usages IA dans les processus internes</li>
-          <li>Évolution des exigences de sécurité et de protection des données</li>
-          <li>Pression croissante sur la conformité et la gouvernance</li>
-          <li>Besoin d’optimisation des performances et de la résilience</li>
+          <li>Actualisation des usages IA dans les outils de travail.</li>
+          <li>Évolution des recommandations en cybersécurité.</li>
+          <li>Suivi des changements réglementaires et des bonnes pratiques.</li>
+          <li>Mise à jour des points de vigilance sur les données et la gouvernance.</li>
         </ul>
       </section>
 
@@ -67,5 +65,15 @@
         </article>
       </section>
     </main>
+
+    <script>
+      const today = new Date();
+      const day = String(today.getDate()).padStart(2, '0');
+      const month = String(today.getMonth() + 1).padStart(2, '0');
+      const year = today.getFullYear();
+
+      document.getElementById('badge-maj').textContent = `MAJ du ${day}`;
+      document.getElementById('date-maj').textContent = `Les informations ont été actualisées le ${day}/${month}/${year}.`;
+    </script>
   </body>
 </html>
