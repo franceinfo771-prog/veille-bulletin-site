@@ -44,7 +44,8 @@ body {
 }
 
 .nav-link,
-.cta-button {
+.cta-button,
+.update-button {
   display: inline-block;
   text-decoration: none;
   font-weight: 700;
@@ -84,16 +85,18 @@ h1 {
   line-height: 1.6;
 }
 
-.cta-button {
-  margin-top: 26px;
+.cta-button,
+.update-button {
+  margin-top: 16px;
   background: var(--primary);
   color: white;
-  padding: 14px 24px;
+  padding: 12px 20px;
   box-shadow: 0 10px 25px var(--shadow);
   transition: background 0.2s ease;
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.update-button:hover {
   background: var(--primary-dark);
 }
 
@@ -136,7 +139,8 @@ main {
 }
 
 .update-banner ul {
-  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 0;
   padding-left: 18px;
   color: var(--text);
   line-height: 1.8;
